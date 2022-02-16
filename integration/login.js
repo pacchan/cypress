@@ -7,7 +7,10 @@
 describe('log in', function () {
     it('log in to home page', function(){
         cy.visit('http://13.75.189.136:8081')
-        expect(true).to.equal(true)
+        cy.get('#username').type('ubiquity')
+        cy.get('#password').type('P@ss123#UbiQuity')
+        cy.get('.btn').click()
+        cy.get('[href="/editprofile"]').click()
     })
 
 })
