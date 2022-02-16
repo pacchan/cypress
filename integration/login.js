@@ -18,9 +18,11 @@ describe('Qurious interview', function () {
         .type('qa+'+ d.getTime('en-GB') + '@test.co.nz')
         cy.get('#DateOfBirth > .field-value > .textfield').clear()
         .type(d.toLocaleDateString('en-GB'))
+        // could update new password with Date and store in the global variable, when login use the variable on the step 1
         cy.get('#NewPassword > .field-value > .textfield').type('P@ss123#UbiQuity')
         cy.get('#ConfirmNewPassword > .field-value > .textfield').type('P@ss123#UbiQuity')
         cy.get('.submit-button').click()
+        // successful message shuold appears if passed
         cy.get('#SuccessMessage').should('be.visible')
     })
 
