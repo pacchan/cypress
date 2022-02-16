@@ -1,9 +1,4 @@
-// untitled.spec.js created with Cypress
-//
-// Start writing your Cypress tests below!
-// If you're unfamiliar with how Cypress works,
-// check out the link below and learn how to write your first test:
-// https://on.cypress.io/writing-first-test
+
 describe('Qurious interview', function () {
     it('log in to home page and browses to edit profile page', function(){
         cy.visit('http://13.75.189.136:8081')
